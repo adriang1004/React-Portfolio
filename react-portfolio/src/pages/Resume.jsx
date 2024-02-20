@@ -1,6 +1,6 @@
 function Resume() {
     return (
-      <div className="mt-5">
+      <div className="mt-5" >
       <h2>Resume</h2>
       <a href="/resume-placeholder.svg" download="/resume-placeholder.svg" className="resume-link">Download My Resume</a>
       <h4>Proficiencies</h4>

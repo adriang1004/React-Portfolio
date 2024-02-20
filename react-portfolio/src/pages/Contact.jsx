@@ -27,6 +27,7 @@ function Contact() {
           Submit
         </Button>
       </Form>
+      <p>Additionally, reach me at adriang1004@gmail.com.</p>
     </Container>
   );
 }

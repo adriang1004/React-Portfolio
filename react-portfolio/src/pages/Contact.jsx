@@ -1,28 +1,34 @@
-import { useState } from 'react';
+import React from 'react';
+import { Container, Form, Button } from 'react-bootstrap';
 
 function Contact() {
-    const [formState, setFormState] = useState({
-        name: '',
-        email: '',
-        message: ''
-    });
+  return (
+    <Container className="mt-5">
+      <h2>Contact</h2>
+      <Form>
+        <Form.Group className="mb-3" controlId="formBasicName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control type="text" placeholder="Enter your name" required />
+        </Form.Group>
 
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        alert('Form submitted');
-        console.log('Form submitted');
-    };
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" required />
+          <Form.Text className="text-muted">
+          </Form.Text>
+        </Form.Group>
 
-    return (
-        <section>
-            <h2>Contact</h2>
-            <form onSubmit={handleFormSubmit}>
-                <label>Name:
-                    <input type="text" name="name" required onChange={(e) => setFormState({...formState, name: e.target.value})} />
-                </label>
-            </form>
-        </section>
-    )
+        <Form.Group className="mb-3" controlId="formBasicMessage">
+          <Form.Label>Message</Form.Label>
+          <Form.Control as="textarea" rows={3} placeholder="Your message" required />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </Container>
+  );
 }
 
 export default Contact;

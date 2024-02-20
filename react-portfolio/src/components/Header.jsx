@@ -7,9 +7,9 @@ function Header() {
   const setActiveClass = ({ isActive }) => (isActive ? 'activeLink' : 'link');
 
   return (
-    <Navbar bg="dark" fixed="top" expand="md" className="shadow-sm">
+    <Navbar fixed="top" expand="md" className="shadow-sm">
         <Container fluid>
-      <Navbar.Brand as={NavLink} to="/" className="fs-3" style={{color:'#ffd700'}}>
+      <Navbar.Brand as={NavLink} to="/" className="fs-2" style={{color:'#ffd700'}}>
         Adrian Garcia
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
